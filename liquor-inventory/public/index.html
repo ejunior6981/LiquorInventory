@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquor Inventory</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Liquor Inventory System</h1>
+
+        <!-- Barcode Scanner UI -->
+        <div id="scanner-container">
+            <video id="interactive" width="300" height="200"></video>
+            <button id="scan-button">Scan Barcode</button>
+            <p id="result-display">Place barcode in view and press "Scan"</p>
+        </div>
+
+        <!-- Inventory Form -->
+        <form id="inventory-form">
+            <h2>Add Liquor Item</h2>
+            <div class="form-group">
+                <label for="barcode">Barcode:</label>
+                <input type="text" id="barcode" placeholder="Scan or enter barcode">
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required placeholder="Liquor name">
+            </div>
+            <div class="form-group">
+                <label for="brand">Brand:</label>
+                <input type="text" id="brand" required placeholder="Brand">
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" required min="1" value="1">
+            </div>
+            <div class="form-group">
+                <label for="price">Purchase Price ($):</label>
+                <input type="number" id="price" required step="0.01" min="0">
+            </div>
+            <button type="submit">Add to Inventory</button>
+        </form>
+
+        <!-- Inventory List -->
+        <div id="inventory-list">
+            <h2>Current Inventory</h2>
+            <ul id="inventory-items"></ul>
+        </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

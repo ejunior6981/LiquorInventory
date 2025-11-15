@@ -1,0 +1,23 @@
+{
+  "name": "liquor-inventory",
+  "version": "1.0.0",
+  "description": "A PWA for tracking liquor inventory with barcode scanning and camera access",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pwa",
+    "liquor",
+    "inventory",
+    "barcode",
+    "camera"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "quagga": "^0.12.1",
+    "workbox-build": "^7.3.0"
+  }
+}
